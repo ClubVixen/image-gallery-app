@@ -1,0 +1,64 @@
+﻿<Window x:Class="ImageGalleryApp.Views.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings" SizeToContent="Height" Width="500"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        WindowStyle="ToolWindow">
+
+  <Grid Margin="15">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+
+    <StackPanel Grid.Row="0">
+      <TextBlock Text="General" FontWeight="Bold" Margin="0,0,0,5"/>
+      <DockPanel Margin="0,5">
+        <TextBlock Text="Thumbnail Size (px):" VerticalAlignment="Center"/>
+        <TextBox x:Name="ThumbnailSizeTextBox" Margin="10,0,0,0" Width="80" HorizontalAlignment="Right"/>
+      </DockPanel>
+      <DockPanel Margin="0,5">
+        <TextBlock Text="Maximum Blacklisted Items:" VerticalAlignment="Center"/>
+        <TextBox x:Name="MaxBlacklistedTextBox" Margin="10,0,0,0" Width="80" HorizontalAlignment="Right"/>
+      </DockPanel>
+
+      <Separator Margin="0,15"/>
+
+      <TextBlock Text="Normal Mode" FontWeight="Bold" Margin="0,0,0,5"/>
+      <DockPanel Margin="0,5">
+        <TextBlock Text="Total Images to Choose:" VerticalAlignment="Center"/>
+        <TextBox x:Name="TotalImagesTextBox" Margin="10,0,0,0" Width="80" HorizontalAlignment="Right"/>
+      </DockPanel>
+      <DockPanel Margin="0,5">
+        <TextBlock Text="Maximum Rerolls:" VerticalAlignment="Center"/>
+        <TextBox x:Name="MaxRerollsTextBox" Margin="10,0,0,0" Width="80" HorizontalAlignment="Right"/>
+      </DockPanel>
+      <DockPanel Margin="0,5">
+        <TextBlock Text="Elimination: Target Final Images:" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox x:Name="TargetFinalTextBox" Margin="10,0,0,0" Width="80" HorizontalAlignment="Right"/>
+      </DockPanel>
+
+      <Separator Margin="0,15"/>
+
+      <TextBlock Text="Fap Roulette" FontWeight="Bold" Margin="0,0,0,5"/>
+      <DockPanel Margin="0,5">
+        <TextBlock Text="Number of Images to Show:" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox x:Name="FapRouletteImageCountTextBox" Margin="10,0,0,0" Width="80" HorizontalAlignment="Right"/>
+      </DockPanel>
+
+      <Separator Margin="0,15"/>
+
+      <TextBlock Text="Favorites View" FontWeight="Bold" Margin="0,0,0,5"/>
+      <DockPanel Margin="0,5">
+        <TextBlock Text="Number of Images to Show:" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox x:Name="FavoritesImageCountTextBox" Margin="10,0,0,0" Width="80" HorizontalAlignment="Right"/>
+      </DockPanel>
+    </StackPanel>
+
+    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+      <Button Content="OK" IsDefault="True" Width="100" Margin="5" Click="OK_Click" Style="{StaticResource AccentButton}"/>
+      <Button Content="Cancel" IsCancel="True" Width="100" Margin="5" Click="Cancel_Click"/>
+    </StackPanel>
+  </Grid>
+</Window>

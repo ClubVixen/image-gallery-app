@@ -1,0 +1,1 @@
+index is stored C:\Users\<YourUsername>\AppData\Roaming\ImageGalleryApp\image_index.json
